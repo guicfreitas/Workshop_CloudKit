@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGs-Wq-oUb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -32,7 +32,7 @@
         <!--View Controller-->
         <scene sceneID="QCX-ig-SrX">
             <objects>
-                <viewController id="GsM-D9-tyF" sceneMemberID="viewController">
+                <viewController id="GsM-D9-tyF" customClass="ViewController" customModule="CK_Decolando_para_as_Nuvens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tN8-6W-rxe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="muX-T7-uMS" detailTextLabel="vgT-c0-YuM" imageView="cG9-Fh-cIk" rowHeight="86" style="IBUITableViewCellStyleSubtitle" id="bHL-tR-HaE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" textLabel="muX-T7-uMS" detailTextLabel="vgT-c0-YuM" imageView="cG9-Fh-cIk" rowHeight="86" style="IBUITableViewCellStyleSubtitle" id="bHL-tR-HaE" customClass="ListTableViewCell" customModule="CK_Decolando_para_as_Nuvens" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="102" width="414" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bHL-tR-HaE" id="qQ5-vI-nY2">
@@ -76,8 +76,17 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailsList" destination="vgT-c0-YuM" id="Gbi-yW-aRF"/>
+                                            <outlet property="imageList" destination="cG9-Fh-cIk" id="E1y-Jm-PAc"/>
+                                            <outlet property="nameList" destination="muX-T7-uMS" id="xtu-pc-fBe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GsM-D9-tyF" id="lAd-Ky-TTx"/>
+                                    <outlet property="delegate" destination="GsM-D9-tyF" id="mwP-IQ-EIP"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GRE-x6-czh"/>
@@ -94,6 +103,9 @@
                         <imageReference key="largeContentSizeImage" image="gift.fill" catalog="system" symbolScale="large"/>
                         <imageReference key="selectedImage" image="gift.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="oXM-1H-vrd" id="wyG-5O-rui"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDg-Mw-ySP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		648CCE30256FDD6600954A74 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CCE2F256FDD6600954A74 /* File.swift */; };
+		648CCE35256FDE4500954A74 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CCE34256FDE4500954A74 /* ListTableViewCell.swift */; };
 		79E70D56256D58C800847F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E70D55256D58C800847F5F /* AppDelegate.swift */; };
 		79E70D58256D58C800847F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E70D57256D58C800847F5F /* SceneDelegate.swift */; };
 		79E70D5A256D58C800847F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E70D59256D58C800847F5F /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		648CCE2F256FDD6600954A74 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		648CCE34256FDE4500954A74 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		79E70D52256D58C800847F5F /* CK_Decolando para as Nuvens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CK_Decolando para as Nuvens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E70D55256D58C800847F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79E70D57256D58C800847F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		648CCE26256FDD1200954A74 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				648CCE2F256FDD6600954A74 /* File.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		79E70D49256D58C800847F5F = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +111,7 @@
 		79E70D54256D58C800847F5F /* CK_Decolando para as Nuvens */ = {
 			isa = PBXGroup;
 			children = (
+				648CCE26256FDD1200954A74 /* Extension */,
 				79E70D55256D58C800847F5F /* AppDelegate.swift */,
 				79E70D57256D58C800847F5F /* SceneDelegate.swift */,
 				79E70D59256D58C800847F5F /* ViewController.swift */,
@@ -106,6 +119,7 @@
 				79E70D5E256D58CB00847F5F /* Assets.xcassets */,
 				79E70D60256D58CB00847F5F /* LaunchScreen.storyboard */,
 				79E70D63256D58CB00847F5F /* Info.plist */,
+				648CCE34256FDE4500954A74 /* ListTableViewCell.swift */,
 			);
 			path = "CK_Decolando para as Nuvens";
 			sourceTree = "<group>";
@@ -259,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				79E70D5A256D58C800847F5F /* ViewController.swift in Sources */,
+				648CCE30256FDD6600954A74 /* File.swift in Sources */,
 				79E70D56256D58C800847F5F /* AppDelegate.swift in Sources */,
 				79E70D58256D58C800847F5F /* SceneDelegate.swift in Sources */,
+				648CCE35256FDE4500954A74 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
