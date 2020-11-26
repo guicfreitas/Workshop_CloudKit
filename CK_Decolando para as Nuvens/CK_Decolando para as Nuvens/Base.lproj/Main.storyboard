@@ -31,14 +31,33 @@
                     <view key="view" contentMode="scaleToFill" id="tN8-6W-rxe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oXM-1H-vrd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Lista de presentes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="x70-Qs-J9k">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GRE-x6-czh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oXM-1H-vrd" firstAttribute="top" secondItem="GRE-x6-czh" secondAttribute="top" id="1Tg-YO-hxR"/>
+                            <constraint firstItem="oXM-1H-vrd" firstAttribute="leading" secondItem="GRE-x6-czh" secondAttribute="leading" id="EPe-Hc-mQV"/>
+                            <constraint firstItem="GRE-x6-czh" firstAttribute="bottom" secondItem="oXM-1H-vrd" secondAttribute="bottom" id="MwP-iN-zfb"/>
+                            <constraint firstItem="GRE-x6-czh" firstAttribute="trailing" secondItem="oXM-1H-vrd" secondAttribute="trailing" id="qZd-JP-crT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" selectedImage="gift.fill" catalog="system" id="j2H-e7-Kbw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDg-Mw-ySP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928" y="-232"/>
+            <point key="canvasLocation" x="927.536231884058" y="-232.36607142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Jmm-CV-aOe">
