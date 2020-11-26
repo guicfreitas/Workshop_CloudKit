@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="twz-Hf-r7s">
             <objects>
                 <viewController id="VHq-i2-DKU" sceneMemberID="viewController">
@@ -19,13 +19,17 @@
                         <viewLayoutGuide key="safeArea" id="pKc-rK-ICx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="envelope.fill" catalog="system" id="awO-aO-dJ7"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="envelope.fill" catalog="system" id="awO-aO-dJ7">
+                        <imageReference key="image" image="envelope.fill" catalog="system" symbolScale="large"/>
+                        <imageReference key="landscapeImage" image="envelope.fill" catalog="system" symbolScale="large"/>
+                        <imageReference key="largeContentSizeImage" image="envelope.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUN-VO-kdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928" y="375"/>
+            <point key="canvasLocation" x="928" y="425"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
         <scene sceneID="QCX-ig-SrX">
             <objects>
                 <viewController id="GsM-D9-tyF" sceneMemberID="viewController">
@@ -85,7 +89,11 @@
                             <constraint firstItem="GRE-x6-czh" firstAttribute="trailing" secondItem="oXM-1H-vrd" secondAttribute="trailing" id="qZd-JP-crT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="gift.fill" catalog="system" id="j2H-e7-Kbw"/>
+                    <tabBarItem key="tabBarItem" title="" id="j2H-e7-Kbw">
+                        <imageReference key="landscapeImage" image="gift.fill" catalog="system" symbolScale="large"/>
+                        <imageReference key="largeContentSizeImage" image="gift.fill" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="gift.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDg-Mw-ySP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
