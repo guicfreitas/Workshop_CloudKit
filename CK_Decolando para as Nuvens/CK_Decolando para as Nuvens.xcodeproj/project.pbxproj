@@ -88,6 +88,33 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		79AF75D9256FF3B500A4A780 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		79AF75DB256FF3CD00A4A780 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				648CCE34256FDE4500954A74 /* ListTableViewCell.swift */,
+				79E70D5B256D58C800847F5F /* Main.storyboard */,
+				79E70D60256D58CB00847F5F /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79AF75DC256FF3D900A4A780 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				79E70D55256D58C800847F5F /* AppDelegate.swift */,
+				79E70D57256D58C800847F5F /* SceneDelegate.swift */,
+				79E70D59256D58C800847F5F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		79E70D49256D58C800847F5F = {
 			isa = PBXGroup;
 			children = (
@@ -111,15 +138,12 @@
 		79E70D54256D58C800847F5F /* CK_Decolando para as Nuvens */ = {
 			isa = PBXGroup;
 			children = (
+				79AF75DC256FF3D900A4A780 /* Controller */,
+				79AF75DB256FF3CD00A4A780 /* View */,
+				79AF75D9256FF3B500A4A780 /* Model */,
 				648CCE26256FDD1200954A74 /* Extension */,
-				79E70D55256D58C800847F5F /* AppDelegate.swift */,
-				79E70D57256D58C800847F5F /* SceneDelegate.swift */,
-				79E70D59256D58C800847F5F /* ViewController.swift */,
-				79E70D5B256D58C800847F5F /* Main.storyboard */,
 				79E70D5E256D58CB00847F5F /* Assets.xcassets */,
-				79E70D60256D58CB00847F5F /* LaunchScreen.storyboard */,
 				79E70D63256D58CB00847F5F /* Info.plist */,
-				648CCE34256FDE4500954A74 /* ListTableViewCell.swift */,
 			);
 			path = "CK_Decolando para as Nuvens";
 			sourceTree = "<group>";
