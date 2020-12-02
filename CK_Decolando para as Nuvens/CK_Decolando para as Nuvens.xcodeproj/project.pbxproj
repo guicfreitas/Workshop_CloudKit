@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		648A8B24257129D900169B8A /* CK_Decolando para as Nuvens.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CK_Decolando para as Nuvens.entitlements"; sourceTree = "<group>"; };
 		648CCE2F256FDD6600954A74 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 		648CCE34256FDE4500954A74 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		6495F4A4256FF97D006DCBE2 /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +142,7 @@
 		79E70D54256D58C800847F5F /* CK_Decolando para as Nuvens */ = {
 			isa = PBXGroup;
 			children = (
+				648A8B24257129D900169B8A /* CK_Decolando para as Nuvens.entitlements */,
 				79AF75DC256FF3D900A4A780 /* Controller */,
 				79AF75DB256FF3CD00A4A780 /* View */,
 				79AF75D9256FF3B500A4A780 /* Model */,
@@ -480,8 +482,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CK_Decolando para as Nuvens/CK_Decolando para as Nuvens.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R5H255ZF9U;
+				DEVELOPMENT_TEAM = 42ZN9N6G82;
 				INFOPLIST_FILE = "CK_Decolando para as Nuvens/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,8 +502,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CK_Decolando para as Nuvens/CK_Decolando para as Nuvens.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R5H255ZF9U;
+				DEVELOPMENT_TEAM = 42ZN9N6G82;
 				INFOPLIST_FILE = "CK_Decolando para as Nuvens/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
