@@ -16,6 +16,7 @@ class LetterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        signature.layer.borderColor = UIColor(red: 0.76, green: 0.27, blue: 0.25, alpha: 1.00).cgColor
 
         // Do any additional setup after loading the view.
     }
