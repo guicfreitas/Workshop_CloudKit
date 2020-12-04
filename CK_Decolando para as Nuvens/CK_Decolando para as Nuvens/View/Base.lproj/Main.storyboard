@@ -210,12 +210,11 @@
                                 <rect key="frame" x="20" y="255.5" width="374" height="385"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-iG-EXv">
-                                <rect key="frame" x="84" y="255" width="246" height="179"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="testinho de mamãe " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-iG-EXv">
+                                <rect key="frame" x="84" y="264" width="246" height="179"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2n8-iG-EXv" secondAttribute="height" multiplier="11:8" id="okf-Rm-UDs"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -226,9 +225,9 @@
                         <constraints>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="centerX" secondItem="Pvg-H4-C4n" secondAttribute="centerX" id="2Nh-3h-EVQ"/>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="height" secondItem="Pvg-H4-C4n" secondAttribute="height" multiplier="0.429688" id="AG9-8v-bQf"/>
-                            <constraint firstItem="2n8-iG-EXv" firstAttribute="top" secondItem="Y5F-bF-Wjd" secondAttribute="top" constant="211" id="HQD-KJ-Z5q"/>
                             <constraint firstItem="2n8-iG-EXv" firstAttribute="height" secondItem="Pvg-H4-C4n" secondAttribute="height" multiplier="0.199777" id="TM7-wU-X40"/>
                             <constraint firstItem="2n8-iG-EXv" firstAttribute="centerX" secondItem="Pvg-H4-C4n" secondAttribute="centerX" id="bNU-it-HcH"/>
+                            <constraint firstItem="2n8-iG-EXv" firstAttribute="top" secondItem="Y5F-bF-Wjd" secondAttribute="top" constant="220" id="bbn-O4-aeC"/>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="centerY" secondItem="Pvg-H4-C4n" secondAttribute="centerY" id="eix-aC-zq6"/>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="width" secondItem="Pvg-H4-C4n" secondAttribute="width" multiplier="0.903382" id="rZb-M7-E5I"/>
                         </constraints>
