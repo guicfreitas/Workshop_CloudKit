@@ -10,6 +10,8 @@
 		648CCE30256FDD6600954A74 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CCE2F256FDD6600954A74 /* ExtensionViewController.swift */; };
 		648CCE35256FDE4500954A74 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CCE34256FDE4500954A74 /* ListTableViewCell.swift */; };
 		6495F4A5256FF97D006DCBE2 /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6495F4A4256FF97D006DCBE2 /* LetterViewController.swift */; };
+		7963C84B25791F98004D5838 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7963C84A25791F98004D5838 /* CloudKit.framework */; };
+		7963C8502579253A004D5838 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7963C84F2579253A004D5838 /* Letter.swift */; };
 		79E70D56256D58C800847F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E70D55256D58C800847F5F /* AppDelegate.swift */; };
 		79E70D58256D58C800847F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E70D57256D58C800847F5F /* SceneDelegate.swift */; };
 		79E70D5A256D58C800847F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E70D59256D58C800847F5F /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 		648CCE2F256FDD6600954A74 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 		648CCE34256FDE4500954A74 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		6495F4A4256FF97D006DCBE2 /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
+		7963C84A25791F98004D5838 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		7963C84F2579253A004D5838 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		79E70D52256D58C800847F5F /* CK_Decolando para as Nuvens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CK_Decolando para as Nuvens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E70D55256D58C800847F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79E70D57256D58C800847F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7963C84B25791F98004D5838 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,9 +96,18 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		7963C84925791F98004D5838 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7963C84A25791F98004D5838 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79AF75D9256FF3B500A4A780 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7963C84F2579253A004D5838 /* Letter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +140,7 @@
 				79E70D6B256D58CB00847F5F /* CK_Decolando para as NuvensTests */,
 				79E70D76256D58CB00847F5F /* CK_Decolando para as NuvensUITests */,
 				79E70D53256D58C800847F5F /* Products */,
+				7963C84925791F98004D5838 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7963C8502579253A004D5838 /* Letter.swift in Sources */,
 				79E70D5A256D58C800847F5F /* ViewController.swift in Sources */,
 				648CCE30256FDD6600954A74 /* ExtensionViewController.swift in Sources */,
 				79E70D56256D58C800847F5F /* AppDelegate.swift in Sources */,
@@ -484,7 +500,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CK_Decolando para as Nuvens/CK_Decolando para as Nuvens.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42ZN9N6G82;
+				DEVELOPMENT_TEAM = R5H255ZF9U;
 				INFOPLIST_FILE = "CK_Decolando para as Nuvens/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,7 +520,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CK_Decolando para as Nuvens/CK_Decolando para as Nuvens.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42ZN9N6G82;
+				DEVELOPMENT_TEAM = R5H255ZF9U;
 				INFOPLIST_FILE = "CK_Decolando para as Nuvens/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
