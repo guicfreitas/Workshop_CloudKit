@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGs-Wq-oUb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGs-Wq-oUb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -191,17 +191,17 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="hyn-gz-CgH" id="XCj-Qz-Ghh"/>
-                        <segue destination="GmO-GJ-eGS" kind="show" id="Ed6-7w-rdL"/>
+                        <segue destination="GmO-GJ-eGS" kind="show" identifier="editCell" id="Ed6-7w-rdL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eev-ip-dvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928" y="-271"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Letter View Controller-->
         <scene sceneID="X2F-eY-wlK">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="GmO-GJ-eGS" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="GmO-GJ-eGS" customClass="EditLetterViewController" customModule="CK_Decolando_para_as_Nuvens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pvg-H4-C4n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,6 +253,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jsm-yx-gz2"/>
+                    <connections>
+                        <outlet property="contentText" destination="2n8-iG-EXv" id="Gcn-v8-V8P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxT-zL-aOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

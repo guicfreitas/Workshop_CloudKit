@@ -11,6 +11,50 @@ import UIKit
 
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        guard let indexPath = self.tableView.indexPathForSelectedRow else {
+    //            return
+    //        }
+    //
+    //        let letter = letters[indexPath.row]
+    //        print(segue.identifier)
+    //        if segue.identifier == "editCell"{
+    //            print("entrou")
+    //            let editLetterViewController = segue.destination as! EditLetterViewController
+    //
+    //            editLetterViewController.letter = letter
+    //
+    //        }
+    //      }
+    //
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        guard let indexPath = self.tableView.indexPathForSelectedRow else {
+//
+//            return
+//        }
+//
+//
+//        let letter = letters[indexPath.row]
+//        if segue.identifier == "editCell"{
+//
+//            let editLetterViewController = segue.destination as! EditLetterViewController
+//
+//            editLetterViewController.letter = letter
+//
+//        }
+//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let editLetterViewController = EditLetterViewController()
+        
+        editLetterViewController.letter = letters[indexPath.row]
+        
+        let segue: UIStoryboardSegue = .init(identifier: "editCell", source: self, destination: editLetterViewController)
+        
+        prepare(for: segue, sender: self)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return letters.count
     }
@@ -22,18 +66,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         tableCell.detailsList.text = letters[indexPath.row].content
         switch colorChanger{
         
-            case 0:
-                tableCell.backgroundColor = UIColor(red: 0.29, green: 0.60, blue: 0.53, alpha: 1.00)
-                colorChanger += 1
-                
+        case 0:
+            tableCell.backgroundColor = UIColor(red: 0.29, green: 0.60, blue: 0.53, alpha: 1.00)
+            colorChanger += 1
             
-            case 1:
-                tableCell.backgroundColor = UIColor(red: 0.77, green: 0.27, blue: 0.25, alpha: 1.00)
-                colorChanger += 1
-                
-            case 2:
-                tableCell.backgroundColor = UIColor(red: 0.82, green: 0.90, blue: 0.93, alpha: 1.00)
-                colorChanger = 0
+            
+        case 1:
+            tableCell.backgroundColor = UIColor(red: 0.77, green: 0.27, blue: 0.25, alpha: 1.00)
+            colorChanger += 1
+            
+        case 2:
+            tableCell.backgroundColor = UIColor(red: 0.82, green: 0.90, blue: 0.93, alpha: 1.00)
+            colorChanger = 0
         default:
             tableCell.backgroundColor = UIColor(red: 0.29, green: 0.60, blue: 0.53, alpha: 1.00)
         }
@@ -43,26 +87,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-            return 150
+        return 150
         
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-           
+            
             letters[indexPath.row].deleteRecordWithId(){
                 error in
                 
-                    if error != nil{
-                        print("error in CloudKit Delete operation",error!)
-                    }else{
-                        DispatchQueue.main.async {
-                            self.letters.remove(at: indexPath.row) // Check this out
-                            tableView.deleteRows(at: [indexPath], with: .fade)
-                            tableView.reloadData()
-                        }
-                            
+                if error != nil{
+                    print("error in CloudKit Delete operation",error!)
+                }else{
+                    DispatchQueue.main.async {
+                        self.letters.remove(at: indexPath.row) // Check this out
+                        tableView.deleteRows(at: [indexPath], with: .fade)
+                        tableView.reloadData()
                     }
+                    
+                }
             }
             
             
@@ -71,7 +115,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
-
+    
     
 }
