@@ -12,14 +12,14 @@ import UIKit
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return letters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell") as! ListTableViewCell
         
-        tableCell.nameList.text = "aqui fica o nome"
-        print(colorChanger)
+        tableCell.nameList.text = letters[indexPath.row].name
+        tableCell.detailsList.text = letters[indexPath.row].content
         switch colorChanger{
         
             case 0:
@@ -47,5 +47,31 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+           
+            letters[indexPath.row].deleteRecordWithId(){
+                error in
+                
+                    if error != nil{
+                        print("error in CloudKit Delete operation",error!)
+                    }else{
+                        DispatchQueue.main.async {
+                            self.letters.remove(at: indexPath.row) // Check this out
+                            tableView.deleteRows(at: [indexPath], with: .fade)
+                            tableView.reloadData()
+                        }
+                            
+                    }
+            }
+            
+            
+            
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
+    }
+
+
     
 }

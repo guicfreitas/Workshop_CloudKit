@@ -7,7 +7,11 @@
 
 import UIKit
 
+
 class LetterViewController: UIViewController {
+    
+    
+    
     @IBOutlet weak var letterText: UITextView!
     
     @IBOutlet weak var signature: UITextField!
@@ -19,6 +23,16 @@ class LetterViewController: UIViewController {
         signature.layer.borderColor = UIColor(red: 0.76, green: 0.27, blue: 0.25, alpha: 1.00).cgColor
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func onTouchSend(_ sender: Any) {
+        let letter = Letter(name: signature.text!, content: letterText.text!)
+        letter.createRecord(){
+            error in
+            if error != nil{
+                print("Error in CloudKit:", error as Any)
+            }
+        }
+    
     }
     
 
