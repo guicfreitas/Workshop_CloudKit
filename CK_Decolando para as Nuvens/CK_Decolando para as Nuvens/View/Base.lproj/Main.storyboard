@@ -210,7 +210,7 @@
                                 <rect key="frame" x="20" y="255.5" width="374" height="385"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="testinho de mamãe " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-iG-EXv">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="textinho de mamãe " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-iG-EXv">
                                 <rect key="frame" x="84" y="264" width="246" height="179"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2n8-iG-EXv" secondAttribute="height" multiplier="11:8" id="okf-Rm-UDs"/>
@@ -219,17 +219,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tk4-c1-IEg">
+                                <rect key="frame" x="20" y="94" width="374" height="78"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carta do" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEf-zu-4sR">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <color key="textColor" name="TitleColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joãozinho Pamonha" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h86-HV-kl0">
+                                        <rect key="frame" x="0.0" y="39.5" width="374" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" name="TitleColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y5F-bF-Wjd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="centerX" secondItem="Pvg-H4-C4n" secondAttribute="centerX" id="2Nh-3h-EVQ"/>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="height" secondItem="Pvg-H4-C4n" secondAttribute="height" multiplier="0.429688" id="AG9-8v-bQf"/>
+                            <constraint firstItem="tk4-c1-IEg" firstAttribute="leading" secondItem="Y5F-bF-Wjd" secondAttribute="leading" constant="20" id="MBJ-7g-mhF"/>
                             <constraint firstItem="2n8-iG-EXv" firstAttribute="height" secondItem="Pvg-H4-C4n" secondAttribute="height" multiplier="0.199777" id="TM7-wU-X40"/>
                             <constraint firstItem="2n8-iG-EXv" firstAttribute="centerX" secondItem="Pvg-H4-C4n" secondAttribute="centerX" id="bNU-it-HcH"/>
                             <constraint firstItem="2n8-iG-EXv" firstAttribute="top" secondItem="Y5F-bF-Wjd" secondAttribute="top" constant="220" id="bbn-O4-aeC"/>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="centerY" secondItem="Pvg-H4-C4n" secondAttribute="centerY" id="eix-aC-zq6"/>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="width" secondItem="Pvg-H4-C4n" secondAttribute="width" multiplier="0.903382" id="rZb-M7-E5I"/>
+                            <constraint firstItem="Y5F-bF-Wjd" firstAttribute="trailing" secondItem="tk4-c1-IEg" secondAttribute="trailing" constant="20" id="xTg-AW-DQT"/>
+                            <constraint firstItem="tk4-c1-IEg" firstAttribute="top" secondItem="Y5F-bF-Wjd" secondAttribute="top" constant="50" id="xeO-hP-i2e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jsm-yx-gz2"/>
