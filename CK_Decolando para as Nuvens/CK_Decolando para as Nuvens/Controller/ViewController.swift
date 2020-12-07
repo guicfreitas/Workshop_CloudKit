@@ -6,8 +6,15 @@
 //
 
 import UIKit
+protocol EditLetterViewControllerDelegate{
+    func updateInModalViewController(sender: EditLetterViewController)
+}
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,EditLetterViewControllerDelegate {
+    func updateInModalViewController(sender: EditLetterViewController) {
+        self.viewDidAppear(true)
+    }
+    
     var letters: [Letter] = []{
         didSet{
             DispatchQueue.main.async {

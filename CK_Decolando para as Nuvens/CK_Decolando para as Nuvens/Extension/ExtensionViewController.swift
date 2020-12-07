@@ -28,32 +28,32 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     //        }
     //      }
     //
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        guard let indexPath = self.tableView.indexPathForSelectedRow else {
-//
-//            return
-//        }
-//
-//
-//        let letter = letters[indexPath.row]
-//        if segue.identifier == "editCell"{
-//
-//            let editLetterViewController = segue.destination as! EditLetterViewController
-//
-//            editLetterViewController.letter = letter
-//
-//        }
-//    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let editLetterViewController = EditLetterViewController()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        editLetterViewController.letter = letters[indexPath.row]
+        guard let indexPath = self.tableView.indexPathForSelectedRow else {
+            
+            return
+        }
         
-        let segue: UIStoryboardSegue = .init(identifier: "editCell", source: self, destination: editLetterViewController)
         
-        prepare(for: segue, sender: self)
+        let letter = letters[indexPath.row]
+        if segue.identifier == "editCell"{
+            
+            let editLetterViewController = segue.destination as! EditLetterViewController
+            
+            editLetterViewController.letter = letter
+            editLetterViewController.delegate = self
+        }
     }
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        let editLetterViewController = EditLetterViewController()
+    //
+    //        editLetterViewController.letter = letters[indexPath.row]
+    //        print(letters[indexPath.row])
+    //        let segue: UIStoryboardSegue = .init(identifier: "editCell", source: self, destination: editLetterViewController)
+    //
+    //        prepare(for: segue, sender: self)
+    //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return letters.count

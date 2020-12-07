@@ -98,9 +98,10 @@ struct Letter{
                 completionHandler(error!)
                 return
             }
+            
             //Cast para CKRecordValue pois o compilador swift nao compreende que uma String adota um CKRecordValue
-            record["name"] = self.name as CKRecordValue
-            record["content"] = self.content as CKRecordValue
+            record["name"] = name as CKRecordValue
+            record["content"] = content as CKRecordValue
             
             
             container.publicCloudDatabase.save(record) { _, error in
