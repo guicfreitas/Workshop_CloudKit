@@ -28,6 +28,8 @@ struct Letter{
         //Cast para CKRecordValue pois o compilador swift nao compreende que uma String adota um CKRecordValue
         record["name"] = self.name as CKRecordValue
         record["content"] = self.content as CKRecordValue
+        
+        
         //RecordId = record.recordID
         
         
@@ -69,8 +71,8 @@ struct Letter{
             if error == nil {
                 completionHandler(letterRecords,nil)
             } else {
-            
-               completionHandler(nil,error)
+                
+                completionHandler(nil,error)
             }
             
             
@@ -118,6 +120,33 @@ struct Letter{
             
         }
     }
+    
+    func createSubscription(completionHandler: @escaping (Error?)->()){
+        let subscription = CKQuerySubscription(recordType: "Letter",
+                                               predicate: NSPredicate(value: true),
+                                               options: [.firesOnRecordCreation])
+       
+        
+        
+        let info = CKSubscription.NotificationInfo()
+        info.alertLocalizationKey = "letter_registered_alert"
+        info.alertLocalizationArgs = ["name"]
+        info.soundName = "default"
+        info.desiredKeys = ["name"]
+        info.alertBody = "nova carta criada"
+        subscription.notificationInfo = info
+        
+        
+        container.publicCloudDatabase.save(subscription) { savedSubscription, error in
+            if let error = error {
+                completionHandler(error)
+            } else {
+                UserDefaults.standard.set(savedSubscription!.subscriptionID, forKey: "subscriptionID")
+                completionHandler(nil)
+            } 
+        }
+    }
+    
     
 }
 

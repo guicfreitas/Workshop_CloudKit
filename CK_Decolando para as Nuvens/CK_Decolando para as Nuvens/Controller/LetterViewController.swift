@@ -21,7 +21,8 @@ class LetterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signature.layer.borderColor = UIColor(red: 0.76, green: 0.27, blue: 0.25, alpha: 1.00).cgColor
-
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     @IBAction func onTouchSend(_ sender: Any) {
@@ -35,7 +36,10 @@ class LetterViewController: UIViewController {
     
     }
     
-
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 

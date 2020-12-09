@@ -29,7 +29,20 @@ class ViewController: UIViewController,EditLetterViewControllerDelegate {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        print(self.letters)
+        
+        
+        
+        if UserDefaults.standard.object(forKey: "subscriptionID") == nil{
+           let letter = Letter(name: "", content: "")
+            letter.createSubscription(){
+                error in
+                
+                if error != nil{
+                    print(error!)
+                }
+            }
+        }
+
         
     }
     
