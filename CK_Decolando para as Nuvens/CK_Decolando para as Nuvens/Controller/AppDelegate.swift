@@ -19,11 +19,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //notification configuration
         UNUserNotificationCenter.current().delegate = self
         
-        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        UNUserNotificationCenter.current().requestAuthorization( options: authOptions, completionHandler: {_, _ in })
         
-        application.registerForRemoteNotifications()
+        if #available(iOS 10.0, *) {
+            let center  = UNUserNotificationCenter.current()
+            
+            center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+                if error == nil{
+                    DispatchQueue.main.async{
+                        UIApplication.shared.registerForRemoteNotifications()
+                        
+                    }
+                }
+            }
+            
+        }
+        else {
+            DispatchQueue.main.async{
+                
+                UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert, .badge], categories: nil))
+                UIApplication.shared.registerForRemoteNotifications()
+                
+                
+            }
+        }
+        
+        
+
         return true
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+        print(userInfo)
+        completionHandler([.banner,.sound])
     }
     
     // MARK: UISceneSession Lifecycle
@@ -39,6 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+   
     
     
     

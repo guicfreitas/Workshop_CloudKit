@@ -124,7 +124,7 @@ struct Letter{
     func createSubscription(completionHandler: @escaping (Error?)->()){
         let subscription = CKQuerySubscription(recordType: "Letter",
                                                predicate: NSPredicate(value: true),
-                                               options: [.firesOnRecordCreation])
+                                               options: [.firesOnRecordCreation,.firesOnRecordUpdate,.firesOnRecordDeletion])
        
         
         
@@ -134,6 +134,7 @@ struct Letter{
         info.soundName = "default"
         info.desiredKeys = ["name"]
         info.alertBody = "nova carta criada"
+        info.shouldSendContentAvailable = true
         subscription.notificationInfo = info
         
         

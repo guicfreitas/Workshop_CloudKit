@@ -64,6 +64,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         
         tableCell.nameList.text = letters[indexPath.row].name
         tableCell.detailsList.text = letters[indexPath.row].content
+        
         switch colorChanger{
         
         case 0:
