@@ -21,6 +21,9 @@ class LetterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signature.layer.borderColor = UIColor(red: 0.76, green: 0.27, blue: 0.25, alpha: 1.00).cgColor
+        signature.layer.borderWidth = 1
+        signature.layer.cornerRadius = 5
+        letterText.backgroundColor = .white
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.

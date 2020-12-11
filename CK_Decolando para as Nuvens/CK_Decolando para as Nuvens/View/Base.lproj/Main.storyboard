@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGs-Wq-oUb">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,8 +31,10 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seu nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kpa-nZ-3bJ">
                                                 <rect key="frame" x="40" y="0.0" width="219.5" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" name="TitleColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -76,14 +77,14 @@
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="texto de garota" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="mDk-9r-VcM">
                                 <rect key="frame" x="20" y="182" width="374" height="571"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" name="TextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pKc-rK-ICx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pKc-rK-ICx" firstAttribute="bottom" secondItem="TP7-eY-XhU" secondAttribute="bottom" constant="16" id="0fv-72-H5J"/>
                             <constraint firstItem="jgN-V7-gDs" firstAttribute="leading" secondItem="pKc-rK-ICx" secondAttribute="leading" constant="20" id="HTh-Fl-WWL"/>
@@ -122,10 +123,12 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hyn-gz-CgH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Lista de presentes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LNQ-OG-OVs">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     <color key="textColor" name="TitleColor"/>
                                     <nil key="highlightedColor"/>
@@ -175,7 +178,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tc9-8V-n3D"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hyn-gz-CgH" firstAttribute="top" secondItem="Tc9-8V-n3D" secondAttribute="top" id="NxE-cF-eVE"/>
                             <constraint firstItem="hyn-gz-CgH" firstAttribute="leading" secondItem="Tc9-8V-n3D" secondAttribute="leading" id="Tfq-FB-FO8"/>
@@ -203,7 +206,7 @@
             <objects>
                 <viewController id="GmO-GJ-eGS" customClass="EditLetterViewController" customModule="CK_Decolando_para_as_Nuvens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pvg-H4-C4n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="letter-ck 1" translatesAutoresizingMaskIntoConstraints="NO" id="uB0-vB-lZw">
@@ -211,11 +214,11 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="textinho de mamãe " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2n8-iG-EXv">
-                                <rect key="frame" x="91.5" y="220" width="231" height="168"/>
+                                <rect key="frame" x="91.5" y="240" width="231" height="168.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2n8-iG-EXv" secondAttribute="height" multiplier="11:8" id="okf-Rm-UDs"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -247,7 +250,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y5F-bF-Wjd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="centerX" secondItem="Pvg-H4-C4n" secondAttribute="centerX" id="2Nh-3h-EVQ"/>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="height" secondItem="Pvg-H4-C4n" secondAttribute="height" multiplier="0.429688" id="AG9-8v-bQf"/>
@@ -255,12 +258,12 @@
                             <constraint firstItem="Mx5-62-x3j" firstAttribute="centerX" secondItem="Pvg-H4-C4n" secondAttribute="centerX" id="NyZ-Ip-znr"/>
                             <constraint firstItem="2n8-iG-EXv" firstAttribute="height" secondItem="Pvg-H4-C4n" secondAttribute="height" multiplier="0.199777" id="TM7-wU-X40"/>
                             <constraint firstItem="Mx5-62-x3j" firstAttribute="top" secondItem="uB0-vB-lZw" secondAttribute="bottom" constant="30" id="YRW-KC-BWF"/>
-                            <constraint firstItem="2n8-iG-EXv" firstAttribute="centerX" secondItem="Pvg-H4-C4n" secondAttribute="centerX" id="bNU-it-HcH"/>
-                            <constraint firstItem="2n8-iG-EXv" firstAttribute="top" secondItem="Y5F-bF-Wjd" secondAttribute="top" constant="220" id="bbn-O4-aeC"/>
+                            <constraint firstItem="2n8-iG-EXv" firstAttribute="top" secondItem="uB0-vB-lZw" secondAttribute="top" id="dLm-dL-8bV"/>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="centerY" secondItem="Pvg-H4-C4n" secondAttribute="centerY" id="eix-aC-zq6"/>
                             <constraint firstItem="uB0-vB-lZw" firstAttribute="width" secondItem="Pvg-H4-C4n" secondAttribute="width" multiplier="0.903382" id="rZb-M7-E5I"/>
                             <constraint firstItem="Y5F-bF-Wjd" firstAttribute="trailing" secondItem="tk4-c1-IEg" secondAttribute="trailing" constant="20" id="xTg-AW-DQT"/>
                             <constraint firstItem="tk4-c1-IEg" firstAttribute="top" secondItem="Y5F-bF-Wjd" secondAttribute="top" constant="50" id="xeO-hP-i2e"/>
+                            <constraint firstItem="2n8-iG-EXv" firstAttribute="centerX" secondItem="Pvg-H4-C4n" secondAttribute="centerX" id="yIb-Kl-7sO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jsm-yx-gz2"/>
@@ -309,11 +312,5 @@
         <namedColor name="TitleColor">
             <color red="0.76099997758865356" green="0.27500000596046448" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

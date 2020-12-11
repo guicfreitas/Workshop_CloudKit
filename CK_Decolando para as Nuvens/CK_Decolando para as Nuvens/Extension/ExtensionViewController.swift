@@ -69,12 +69,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         
         case 0:
             tableCell.backgroundColor = UIColor(red: 0.29, green: 0.60, blue: 0.53, alpha: 1.00)
-            colorChanger += 1
+            colorChanger = 1
             
             
         case 1:
             tableCell.backgroundColor = UIColor(red: 0.77, green: 0.27, blue: 0.25, alpha: 1.00)
-            colorChanger += 1
+            colorChanger = 2
             
         case 2:
             tableCell.backgroundColor = UIColor(red: 0.82, green: 0.90, blue: 0.93, alpha: 1.00)

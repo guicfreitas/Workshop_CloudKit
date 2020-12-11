@@ -29,6 +29,7 @@ class ViewController: UIViewController,EditLetterViewControllerDelegate {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = .white
         
         
         
