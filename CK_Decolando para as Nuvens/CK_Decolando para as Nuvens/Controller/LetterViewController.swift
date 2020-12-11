@@ -49,7 +49,7 @@ class LetterViewController: UIViewController {
     }
     
     func clear(){
-        letterText.text = ""
+        letterText.text = "Eu fui uma boa criança esse ano e gostaria de ganhar:"
         signature.text = ""
     }
     /*
