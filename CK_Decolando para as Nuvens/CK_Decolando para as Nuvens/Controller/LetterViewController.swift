@@ -34,6 +34,10 @@ class LetterViewController: UIViewController {
             error in
             if error != nil{
                 print("Error in CloudKit:", error as Any)
+            }else{
+                DispatchQueue.main.async {
+                    self.clear()
+                }
             }
         }
     
@@ -42,6 +46,11 @@ class LetterViewController: UIViewController {
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
+    }
+    
+    func clear(){
+        letterText.text = ""
+        signature.text = ""
     }
     /*
     // MARK: - Navigation

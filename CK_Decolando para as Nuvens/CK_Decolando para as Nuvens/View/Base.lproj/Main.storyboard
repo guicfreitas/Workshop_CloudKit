@@ -76,7 +76,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="texto de garota" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="mDk-9r-VcM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Eu fui uma boa criança esse ano e gostaria de ganhar:" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="mDk-9r-VcM">
                                 <rect key="frame" x="20" y="182" width="374" height="571"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" name="TextColor"/>
