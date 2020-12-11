@@ -131,7 +131,7 @@ struct Letter{
         let info = CKSubscription.NotificationInfo()
         info.alertLocalizationKey = "letter_registered_alert"
         info.alertLocalizationArgs = ["name"]
-        info.soundName = "default"
+        info.soundName = "pushSound.wav"
         info.desiredKeys = ["name"]
         info.alertBody = "nova carta criada"
         info.shouldSendContentAvailable = true
