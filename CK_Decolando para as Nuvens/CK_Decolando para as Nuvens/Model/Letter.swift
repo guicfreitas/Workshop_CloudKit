@@ -13,43 +13,26 @@ struct Letter{
     var content: String
     var RecordId : CKRecord.ID? = nil
     
-    
-    //Criacao do container
     var container: CKContainer {
         return CKContainer(identifier: "iCloud.br.com.WorkshopCK-Test")
     }
     
-    
-    
-    //Parametro da funcao eh uma closure para caso o CloudKit retorne um erro
     func createRecord(completionHandler: @escaping (Error?)->()){
         let record = CKRecord(recordType: "Letter")
         
-        //Cast para CKRecordValue pois o compilador swift nao compreende que uma String adota um CKRecordValue
         record["name"] = self.name as CKRecordValue
         record["content"] = self.content as CKRecordValue
-        
-        
-        //RecordId = record.recordID
-        
-        
+    
         container.publicCloudDatabase.save(record) { _, error in
-            
-            
             if let error = error {
                 completionHandler(error)
             } else {
                 completionHandler(nil)
             }
-            
-            
         }
     }
     
-    
-    func readRecord(completionHandler: @escaping ([Letter]?,Error?)->()){
-        _ = CKRecord(recordType: "Letter")
-        
+    func readRecords(completionHandler: @escaping ([Letter]?,Error?)->()){
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Letter", predicate: predicate)
         let operation = CKQueryOperation(query: query)
@@ -58,12 +41,9 @@ struct Letter{
         
         operation.recordFetchedBlock = { record in
             
-            // record é um registro do tipo Letter que foi obtido na operação
             let letter = Letter(name: record["name"] as! String, content: record["content"] as! String, RecordId: record.recordID)
             
             letterRecords.append(letter)
-            
-            
         }
         
         operation.queryCompletionBlock = { (cursor, error) in
@@ -74,15 +54,12 @@ struct Letter{
                 
                 completionHandler(nil,error)
             }
-            
-            
-            
         }
-        container.publicCloudDatabase.add(operation)
         
+        container.publicCloudDatabase.add(operation)
     }
     
-    func deleteRecordWithId(completionHandler: @escaping (Error?)->()){
+    func deleteRecord(completionHandler: @escaping (Error?)->()){
         container.publicCloudDatabase.delete(withRecordID: self.RecordId!){
             (_,error) in
             if error == nil{
@@ -93,7 +70,7 @@ struct Letter{
         }
     }
     
-    func updateRecordWithId(name:String, content:String, completionHandler: @escaping (Error?)->()){
+    func updateRecord(name:String, content:String, completionHandler: @escaping (Error?)->()){
         container.publicCloudDatabase.fetch(withRecordID: self.RecordId!){
             (record,error) in
             guard let record = record,error == nil else{
@@ -101,23 +78,17 @@ struct Letter{
                 return
             }
             
-            //Cast para CKRecordValue pois o compilador swift nao compreende que uma String adota um CKRecordValue
             record["name"] = name as CKRecordValue
             record["content"] = content as CKRecordValue
             
-            
             container.publicCloudDatabase.save(record) { _, error in
-                
                 
                 if let error = error {
                     completionHandler(error)
                 } else {
                     completionHandler(nil)
                 }
-                
-                
             }
-            
         }
     }
     
@@ -126,8 +97,6 @@ struct Letter{
                                                predicate: NSPredicate(value: true),
                                                options: [.firesOnRecordCreation,.firesOnRecordUpdate,.firesOnRecordDeletion])
        
-        
-        
         let info = CKSubscription.NotificationInfo()
         info.alertLocalizationKey = "letter_registered_alert"
         info.alertLocalizationArgs = ["name"]
@@ -136,7 +105,6 @@ struct Letter{
         info.alertBody = "nova carta criada"
         info.shouldSendContentAvailable = true
         subscription.notificationInfo = info
-        
         
         container.publicCloudDatabase.save(subscription) { savedSubscription, error in
             if let error = error {
@@ -147,8 +115,4 @@ struct Letter{
             } 
         }
     }
-    
-    
 }
-
-

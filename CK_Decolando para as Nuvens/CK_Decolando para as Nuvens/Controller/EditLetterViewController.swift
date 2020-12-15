@@ -12,18 +12,16 @@ class EditLetterViewController: UIViewController {
     var delegate: EditLetterViewControllerDelegate!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var contentText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         contentText.text = letter.content
         nameLabel.text = letter.name
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view.
     }
-    
-    
-    
-    
     
     @IBAction func onTouchUpdate(_ sender: Any) {
         contentText.isEditable = false
@@ -31,7 +29,7 @@ class EditLetterViewController: UIViewController {
         if let newName = nameLabel.text,
            let newContent = contentText.text{
             
-            letter.updateRecordWithId(name: newName, content: newContent){
+            letter.updateRecord(name: newName, content: newContent){
                 error in
                 if error != nil {
                     print("Error in CloudKit update")
@@ -39,7 +37,6 @@ class EditLetterViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.dismiss(animated: true, completion: nil)
                         self.delegate.updateInModalViewController(sender: self)
-                        
                     }
                 }
             }
@@ -47,18 +44,6 @@ class EditLetterViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

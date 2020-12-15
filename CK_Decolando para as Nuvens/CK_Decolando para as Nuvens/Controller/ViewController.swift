@@ -20,18 +20,18 @@ class ViewController: UIViewController,EditLetterViewControllerDelegate {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            
         }
     }
+    
     var colorChanger = 0
+    
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .white
-        
-        
         
         if UserDefaults.standard.object(forKey: "subscriptionID") == nil{
            let letter = Letter(name: "", content: "")
@@ -43,13 +43,11 @@ class ViewController: UIViewController,EditLetterViewControllerDelegate {
                 }
             }
         }
-
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         let letter = Letter(name: "", content: "")
-        letter.readRecord(){
+        letter.readRecords(){
             
             fetchedRecords,error in
             
@@ -59,12 +57,6 @@ class ViewController: UIViewController,EditLetterViewControllerDelegate {
             }
             
             self.letters = records
-            
         }
     }
-    
-    
-    
 }
-
-
